@@ -1,0 +1,309 @@
+/*
+    Personal Portfolio Website
+    Author: Nirakash Khatri
+
+    This external CSS file controls the appearance
+    and layout of the HTML portfolio.
+*/
+
+
+/* ==============================
+   Basic Page Styling
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f8;
+    color: #333333;
+}
+
+
+/* ==============================
+   Header
+   ============================== */
+
+header {
+    background-color: #1f3a5f;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 20px 0;
+    font-size: 32px;
+}
+
+
+/* ==============================
+   Navigation
+   ============================== */
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    /* Flexbox is used for the navigation */
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   Main Content
+   ============================== */
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
+/* ==============================
+   Sections
+   ============================== */
+
+section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 10px;
+
+    /* Creates a small shadow around each section */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #1f3a5f;
+    border-bottom: 2px solid #d9e2ec;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+
+/* ==============================
+   About Section
+   ============================== */
+
+#about img {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+
+    /* Centers the image */
+    margin: 20px auto;
+
+    /* Makes the image circular */
+    border-radius: 50%;
+
+    border: 5px solid #d9e2ec;
+}
+
+#about p {
+    text-align: justify;
+}
+
+
+/* ==============================
+   Skills Section
+   ============================== */
+
+#skills dl {
+    /*
+       CSS Grid is used to create
+       two columns for the skills.
+    */
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 15px;
+}
+
+#skills dt {
+    font-weight: bold;
+    color: #1f3a5f;
+}
+
+#skills dd {
+    margin: 0;
+}
+
+
+/* ==============================
+   Projects Section
+   ============================== */
+
+article {
+    border: 1px solid #d9e2ec;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+article h3 {
+    color: #2c5d8a;
+    margin-top: 0;
+}
+
+article a {
+    color: #1f3a5f;
+    font-weight: bold;
+}
+
+article a:hover {
+    color: #d35400;
+}
+
+
+/* ==============================
+   Contact Form
+   ============================== */
+
+form {
+    max-width: 600px;
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+
+    border: 1px solid #b8c4ce;
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==============================
+   Button
+   ============================== */
+
+button {
+    background-color: #1f3a5f;
+    color: white;
+
+    border: none;
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2c5d8a;
+}
+
+
+/* ==============================
+   Footer
+   ============================== */
+
+footer {
+    background-color: #1f3a5f;
+    color: white;
+    text-align: center;
+
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* ==============================
+   Responsive Design
+   ============================== */
+
+/*
+   These styles are applied when the
+   screen width is 600px or smaller.
+*/
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    /*
+       Navigation changes from horizontal
+       to vertical on small screens.
+    */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    /*
+       The skills layout changes from
+       two columns to one column.
+    */
+    #skills dl {
+        display: block;
+    }
+
+    #skills dt {
+        margin-top: 15px;
+    }
+
+    #skills dd {
+        margin-bottom: 15px;
+    }
+
+    #about img {
+        width: 160px;
+    }
+
+    input,
+    textarea {
+        font-size: 16px;
+    }
+}
